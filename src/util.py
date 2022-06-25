@@ -9,9 +9,19 @@ def clear():
    else:
       _ = system('clear')
 
-
+class Story:
+    def __init__(self,encounterdict) -> None:
+        self.inventory = []
+        self.value = {}
+        self.encounter = encounter_from_dict(encounterdict,self)
+    def render_inventory(self):
+        for i in self.inventory:
+            print(i)
+    def start(self):
+        self.encounter.Render()
+         
 class Action:
-    def __init__(self,text: str,encounter) -> None:
+    def __init__(self,text: str,encounter,story : Story) -> None:
         self.text=text
         self.encounter=encounter
     def Choose(self):
@@ -22,11 +32,12 @@ class Action:
             self.encounter.Render()
 
 class Encounter:
-    def __init__(self,description: str,actions: list[Action]) -> None:
+    def __init__(self,description: str,actions,story : Story) -> None:
         self.description=description
         self.actions=actions
-    
+        self.story = story
     def Render(self):
+        self.story.render_inventory()
         print(self.description)
         print("\n\n")
         for a in self.actions:
@@ -35,12 +46,12 @@ class Encounter:
         choice=int(choice)
         self.actions[choice-1].Choose()
 
-def encounter_from_dict(dict : dict):
+def encounter_from_dict(dict : dict,story : Story):
     if dict==None:
         return None
     actions=dict["actions"]
-    actions=[Action(a["str"],encounter_from_dict(a["encounter"])) for a in actions]
-    return Encounter(description=dict["description"],actions=actions)
+    actions=[Action(a["str"],encounter_from_dict(a["encounter"],story),story) for a in actions]
+    return Encounter(description=dict["description"],actions=actions,story=story)
 
 
 

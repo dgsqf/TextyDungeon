@@ -15,5 +15,5 @@ dict={
     ]
 
 }
-Encounter=util.encounter_from_dict(dict)
-Encounter.Render()
+story=util.Story(dict)
+story.start()
