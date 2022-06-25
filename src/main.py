@@ -4,12 +4,48 @@ dict={
     "actions": [
         {
             "str":"Bonjour",
-            "encounter":None
+            "encounter":{
+    "description":"Bonjour\nJe suis un robot",
+    "actions": [
+        {
+            "str":"Bonjour",
+            "encounter":None,
+            "items":["Bonjour"]
 
         },
         {
             "str":"Aurevoir",
-            "encounter":None
+            "encounter":None,
+            "items":["Aurevoir"]
+
+        }
+    ]
+
+},
+            "items":["Bonjour"]
+
+        },
+        {
+            "str":"Aurevoir",
+            "encounter":{
+    "description":"Bonjour\nJe suis un robot",
+    "actions": [
+        {
+            "str":"Bonjour",
+            "encounter":None,
+            "items":["Bonjour"]
+
+        },
+        {
+            "str":"Aurevoir",
+            "encounter":None,
+            "items":["Aurevoir"]
+
+        }
+    ]
+
+},
+            "items":["Aurevoir"]
 
         }
     ]

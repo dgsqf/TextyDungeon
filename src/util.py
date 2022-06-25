@@ -15,20 +15,27 @@ class Story:
         self.value = {}
         self.encounter = encounter_from_dict(encounterdict,self)
     def render_inventory(self):
+        print("Inventory")
+        print("-------------------------------------------")
         for i in self.inventory:
             print(i)
+        print("-------------------------------------------")
     def start(self):
         self.encounter.Render()
          
 class Action:
-    def __init__(self,text: str,encounter,story : Story) -> None:
+    def __init__(self,text: str,encounter,story : Story,items) -> None:
         self.text=text
         self.encounter=encounter
+        self.items=items
+        self.story=story
     def Choose(self):
         if self.encounter==None:
             print('End')
         else:
             clear()
+            for it in self.items:
+                self.story.inventory.append(it)
             self.encounter.Render()
 
 class Encounter:
@@ -50,7 +57,7 @@ def encounter_from_dict(dict : dict,story : Story):
     if dict==None:
         return None
     actions=dict["actions"]
-    actions=[Action(a["str"],encounter_from_dict(a["encounter"],story),story) for a in actions]
+    actions=[Action(a["str"],encounter_from_dict(a["encounter"],story),story,a["items"]) for a in actions]
     return Encounter(description=dict["description"],actions=actions,story=story)
 
 
