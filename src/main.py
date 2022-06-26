@@ -1,52 +1,23 @@
 import util
 dict={
     "description":"Bonjour\nJe suis un robot",
-    "actions": [
+    "actions":[
         {
             "str":"Bonjour",
             "encounter":{
     "description":"Bonjour\nJe suis un robot",
-    "actions": [
+    "actions":[
         {
             "str":"Bonjour",
             "encounter":None,
-            "items":["Bonjour"]
-
-        },
-        {
-            "str":"Aurevoir",
-            "encounter":None,
-            "items":["Aurevoir"]
-
+            "items":["Bonjour"],
+            "ritems":[]
         }
     ]
 
 },
-            "items":["Bonjour"]
-
-        },
-        {
-            "str":"Aurevoir",
-            "encounter":{
-    "description":"Bonjour\nJe suis un robot",
-    "actions": [
-        {
-            "str":"Bonjour",
-            "encounter":None,
-            "items":["Bonjour"]
-
-        },
-        {
-            "str":"Aurevoir",
-            "encounter":None,
-            "items":["Aurevoir"]
-
-        }
-    ]
-
-},
-            "items":["Aurevoir"]
-
+            "items":["Bonjour"],
+            "ritems":["Auevoir"]
         }
     ]
 
