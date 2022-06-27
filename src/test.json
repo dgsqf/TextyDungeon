@@ -1,0 +1,88 @@
+{
+    "description": "Bonjour\nJe suis un robot",
+    "actions": [
+        {
+            "str": "Bonjour",
+            "encounter": {
+                "description": "Bonjour\nJe suis un robot",
+                "actions": [
+                    {
+                        "str": "Bonjour",
+                        "encounter": null,
+                        "items": [
+                            "Bonjour"
+                        ],
+                        "ritems": [],
+                        "vchanges": [
+                            {
+                                "name": "=",
+                                "operation": "=",
+                                "value": "10"
+                            },
+                            {
+                                "name": "+",
+                                "operation": "+",
+                                "value": "10"
+                            },
+                            {
+                                "name": "-",
+                                "operation": "-",
+                                "value": "10"
+                            },
+                            {
+                                "name": "*",
+                                "operation": "*",
+                                "value": "10"
+                            },
+                            {
+                                "name": "/",
+                                "operation": "/",
+                                "value": "10"
+                            }
+                        ],
+                        "iconditions":[]
+                    }
+                ]
+            },
+            "items": [
+                "Bonjour"
+            ],
+            "ritems": [
+                "Auevoir"
+            ],
+            "vchanges": [
+                {
+                    "name": "=",
+                    "operation": "=",
+                    "value": "10"
+                },
+                {
+                    "name": "+",
+                    "operation": "+",
+                    "value": "10"
+                },
+                {
+                    "name": "-",
+                    "operation": "-",
+                    "value": "10"
+                },
+                {
+                    "name": "*",
+                    "operation": "*",
+                    "value": "10"
+                },
+                {
+                    "name": "/",
+                    "operation": "/",
+                    "value": "10"
+                }
+            ],
+            "iconditions": [
+                {
+                    "mode": "nin",
+                    "item": "Aurevoir"
+                }
+            ]
+        }
+    ]
+}

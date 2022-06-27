@@ -16,7 +16,7 @@ def clear():
 
 class Story:
     def __init__(self,encounterdict,debug) -> None:
-        self.inventory = []
+        self.inventory = ["Aurevoir"]
         self.value = {}
         self.debug = debug
         self.encounter = encounter_from_dict(encounterdict,self)
@@ -36,13 +36,14 @@ class Story:
         self.encounter.Render()
          
 class Action:
-    def __init__(self,text: str,encounter,story : Story,items,ritems,vchanges) -> None:
+    def __init__(self,text: str,encounter,story : Story,items,ritems,vchanges,iconditions) -> None:
         self.text=text
         self.encounter=encounter
         self.items=items
         self.story=story
         self.ritems=ritems
         self.vchanges=vchanges
+        self.iconditions=iconditions
     def Choose(self):
         if self.encounter==None:
             print('End')
@@ -89,17 +90,33 @@ class Encounter:
         self.story.render_inventory()
         print(self.description)
         print("\n\n")
+        pactions=[]
         for a in self.actions:
-            print(str(self.actions.index(a)+1)+':'+a.text)
-        choice=input('>')
-        choice=int(choice)
-        self.actions[choice-1].Choose()
+            for c in a.iconditions:
+                if c["mode"]=="nin":
+                    if c["item"] not in self.story.inventory:
+                        pactions.append(a)
+                        continue
+                if c["mode"]=="in":
+                    if c["item"] in self.story.inventory:
+                        pactions.append(a)
+                        continue
+                
+        if len(pactions) == 0:
+            print("END")            
+        else:
+            for pa in pactions:
+                print(str(pactions.index(pa)+1)+':'+pa.text) 
+                
+            choice=input('>')
+            choice=int(choice)
+            pactions[choice-1].Choose()
 
 def encounter_from_dict(dict : dict,story : Story):
     if dict==None:
         return None
     actions=dict["actions"]
-    actions=[Action(a["str"],encounter_from_dict(a["encounter"],story),story,a["items"],a["ritems"],a["vchanges"]) for a in actions]
+    actions=[Action(a["str"],encounter_from_dict(a["encounter"],story),story,a["items"],a["ritems"],a["vchanges"],a["iconditions"]) for a in actions]
     return Encounter(description=dict["description"],actions=actions,story=story)
 
 
