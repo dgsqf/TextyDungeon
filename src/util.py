@@ -92,6 +92,9 @@ class Encounter:
         print("\n\n")
         pactions=[]
         for a in self.actions:
+            if len(a.iconditions)==0:
+                pactions.append(a)
+                continue
             for c in a.iconditions:
                 if c["mode"]=="nin":
                     if c["item"] not in self.story.inventory:

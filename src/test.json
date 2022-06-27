@@ -78,10 +78,7 @@
                 }
             ],
             "iconditions": [
-                {
-                    "mode": "nin",
-                    "item": "Aurevoir"
-                }
+                
             ]
         }
     ]
