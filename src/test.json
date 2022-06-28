@@ -13,34 +13,10 @@
                             "Bonjour"
                         ],
                         "ritems": [],
-                        "vchanges": [
-                            {
-                                "name": "=",
-                                "operation": "=",
-                                "value": "10"
-                            },
-                            {
-                                "name": "+",
-                                "operation": "+",
-                                "value": "10"
-                            },
-                            {
-                                "name": "-",
-                                "operation": "-",
-                                "value": "10"
-                            },
-                            {
-                                "name": "*",
-                                "operation": "*",
-                                "value": "10"
-                            },
-                            {
-                                "name": "/",
-                                "operation": "/",
-                                "value": "10"
-                            }
-                        ],
-                        "iconditions":[]
+                        
+                        "vchanges":[],
+                        "iconditions":"'Bonjour' in inventory and $= == 10"
+                        
                     }
                 ]
             },
@@ -77,9 +53,7 @@
                     "value": "10"
                 }
             ],
-            "iconditions": [
-                
-            ]
+            "iconditions":""
         }
     ]
 }
