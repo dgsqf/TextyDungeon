@@ -52,10 +52,10 @@ class Action:
         self.iconditions = iconditions
 
     def Choose(self):
-        if self.encounter == None:
+        if not self.encounter:
             print('End')
         else:
-            if self.story.debug == False:
+            if not self.story.debug:
                 clear()
             for it in self.items:
                 self.story.inventory.append(it)
@@ -65,7 +65,7 @@ class Action:
 
                     self.story.inventory.remove(rit)
                 else:
-                    if self.story.debug == True:
+                    if self.story.debug:
                         print(bcolors.FAIL+"couldn't remove item " +
                               rit+" item inexistent")
                         print("there maybe a typo"+bcolors.ENDC)
@@ -114,7 +114,7 @@ class Encounter:
             if eval(condition.replace("inventory", "self.story.inventory")) == True:
                 pactions.append(a)
 
-        if len(pactions) == 0:
+        if not pactions:
             print("END")
         else:
             for pa in pactions:
@@ -126,7 +126,7 @@ class Encounter:
 
 
 def encounter_from_dict(dict: dict, story: Story):
-    if dict == None:
+    if not dict:
         return None
     actions = dict["actions"]
     actions = [Action(a["str"], encounter_from_dict(a["encounter"], story), story,
