@@ -36,7 +36,8 @@
 <h2 align="center">Texty Dungeon</h2>
 
   <p align="center">
-   <h4>A text rpg game engine using python and json</h4> 
+   <h4>A text rpg game engine using python and json</h4>
+   <h4>please star</h4> 
     <br />
     <a href="https://github.com/dgsqf/TextyDungeon"><strong>Explore the docs »</strong></a>
     <br />
