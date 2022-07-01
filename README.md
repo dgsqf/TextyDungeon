@@ -92,12 +92,6 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
-
-### Installation
 
 
 1. Clone the repo
@@ -147,6 +141,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+Contributing to the docs or fixing typoes are also greatly appreciated
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
