@@ -1,4 +1,5 @@
 from os import system, name
+import re
 
 
 class bcolors:
@@ -111,7 +112,7 @@ class Encounter:
 
                 condition = condition.replace('$'+r, str(self.story.value[r]))
 
-            if eval(condition.replace("inventory", "self.story.inventory")) == True:
+            if eval(condition.replace("__", ""), {"__builtins__": None}, {"inventory": self.story.inventory}):
                 pactions.append(a)
 
         if not pactions:
