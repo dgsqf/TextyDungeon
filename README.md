@@ -28,12 +28,9 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-
-  </a>
-
-<h2 align="center">Texty Dungeon</h2>
+<h1 align="center">
+    TextyDungeon
+</h1>
 
   <p align="center">
    <h4>A text rpg game engine using python and json</h4>
