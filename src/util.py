@@ -130,6 +130,6 @@ def encounter_from_dict(dict: dict, story: Story):
     if not dict:
         return None
     actions = dict["actions"]
-    actions = [Action(a["str"], encounter_from_dict(a["encounter"], story), story,
-                      a["items"], a["ritems"], a["vchanges"], a["iconditions"]) for a in actions]
+    actions = [Action(a["description"], encounter_from_dict(a["encounter"], story), story,
+                      a["additems"], a["removeitems"], a["valuechanges"], a["conditions"]) for a in actions]
     return Encounter(description=dict["description"], actions=actions, story=story)
