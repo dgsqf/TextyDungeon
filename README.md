@@ -28,16 +28,24 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-
-  </a>
-
-<h2 align="center">Texty Dungeon</h2>
+<h1 align="center">
+    TextyDungeon
+    <p/>
+    <br />
+    <a href="https://github.com/dgsqf/TextyDungeon"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/dgsqf/TextyDungeon">View Demo</a>
+    ·
+    <a href="https://github.com/dgsqf/TextyDungeon/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/dgsqf/TextyDungeon/issues">Request Feature</a>
+  </p>
+</h1>
 
   <p align="center">
    <h4>A text rpg game engine using python and json</h4>
-   <h4>please star</h4> 
+   <p/>
     <br />
     <a href="https://github.com/dgsqf/TextyDungeon"><strong>Explore the docs »</strong></a>
     <br />
