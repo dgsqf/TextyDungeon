@@ -30,6 +30,17 @@
 <!-- PROJECT LOGO -->
 <h1 align="center">
     TextyDungeon
+    <p/>
+    <br />
+    <a href="https://github.com/dgsqf/TextyDungeon"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/dgsqf/TextyDungeon">View Demo</a>
+    ·
+    <a href="https://github.com/dgsqf/TextyDungeon/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/dgsqf/TextyDungeon/issues">Request Feature</a>
+  </p>
 </h1>
 
   <p align="center">
