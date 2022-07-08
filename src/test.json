@@ -2,7 +2,7 @@
     "description": "Bonjour\nJe suis un robot",
     "actions": [
         {
-            "str": "Bonjour",
+            "description": "Bonjour",
             "encounter": {
                 "description": "Bonjour\nJe suis un robot",
                 "actions": [

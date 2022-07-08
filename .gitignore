@@ -1,3 +1,7 @@
-src/__pycache__/util.cpython-37.pyc
-src/__pycache__/util.cpython-39.pyc
+src/__pycache__/
+
+.vscode/
 .DS_Store
+.vscode/settings.json
+
+
