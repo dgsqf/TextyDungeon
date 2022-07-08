@@ -1,11 +1,11 @@
+from email.policy import default
 from os import system, name
 import re
+from collections import namedtuple
+c = namedtuple('colors', ['FAIL', 'ENDC'], defaults=[
+    '\033[91m', '\033[0m'])
 
-
-class bcolors:
-
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
+colors = c()
 
 
 def clear():
@@ -67,9 +67,9 @@ class Action:
                     self.story.inventory.remove(rit)
                 else:
                     if self.story.debug:
-                        print(bcolors.FAIL+"couldn't remove item " +
+                        print(colors.FAIL+"couldn't remove item " +
                               rit+" item inexistent")
-                        print("there maybe a typo"+bcolors.ENDC)
+                        print("there maybe a typo"+colors.ENDC)
             for c in self.vchanges:
                 name = c["name"]
                 sign = c["operation"]
