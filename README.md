@@ -101,12 +101,10 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-1.Install. pytest
+1. Install. pytest
    ```sh
    pip install pytest
    ```
-
-
 
 2. Clone the repo
    ```sh
