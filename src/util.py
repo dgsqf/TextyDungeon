@@ -1,4 +1,4 @@
-from email.policy import default
+
 from os import system, name
 import re
 from collections import namedtuple
