@@ -101,20 +101,26 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
+1.Install. pytest
+   ```sh
+   pip install pytest
+   ```
 
 
-1. Clone the repo
+
+2. Clone the repo
    ```sh
    git clone https://github.com/dgsqf/TextyDungeon.git
    ```
-2. cd into the directory
+3. cd into the directory
    ```sh
    cd TextyDungeon/src
    ```
-3. Run this command to check if everything went correctly
+4. Run this command to check if everything went correctly
    ```sh
-   python main.py "test.json"
+   pytest -q
    ```
+   if all test pass then you're good to go
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
