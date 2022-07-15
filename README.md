@@ -101,9 +101,9 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-1. Install. pytest
+1. Install. pytest and textual
    ```sh
-   pip install pytest
+   pip install pytest textual
    ```
 
 2. Clone the repo
