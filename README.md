@@ -45,6 +45,7 @@
 
   <p align="center">
    <h4>A text rpg game engine using python and json</h4>
+   not worked on anymore feel free to use it and open an issue to show me what you made and if people seem interested i may continue this 
    <p/>
     <br />
     <a href="https://github.com/dgsqf/TextyDungeon"><strong>Explore the docs »</strong></a>
